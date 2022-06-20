@@ -1,0 +1,54 @@
+.copyright {
+  font-size: 15px;
+  padding-left: -10px;
+  padding-top: 200px;
+  text-align: center;
+  color: white;
+  
+  font-family: 'Libre Bodoni', serif;
+}
+
+.fa {
+  padding: 10px;
+  margin: 2px 5px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  border: none;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  width: 40px;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
+
+.fa-snapchat-ghost {
+  background: #fffc00;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}

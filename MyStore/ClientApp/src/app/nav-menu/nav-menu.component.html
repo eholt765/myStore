@@ -1,0 +1,145 @@
+
+
+
+<header>
+  <div class="navigation" style="margin-left: 6%; margin-right: 6%;">
+  <div class="item-row">
+    <div class="item-column">
+      <div [routerLinkActive]="['link-active']">
+        <a [routerLink]="['/home']">
+          <button type="button" style="border:solid; width:42%" >
+            <img style="height: 60px; width:100%" src="../assets/logo.jpg">
+          </button>
+        </a>
+      </div>
+    </div>
+
+    <form [formGroup]="searchForm" class="form" (ngSubmit)="search()">
+    <div class="item-column">
+      <div class="wrap" style="left:40%">
+        <div class="search">
+
+           <input type="text" class="searchTerm" placeholder="What are you looking for?" formControlName="SearchTerm">
+           <button type="submit" class="searchButton">
+             <i class="fa fa-search"></i>
+          </button>
+
+        </div>
+     </div>
+    </div>
+    </form>
+
+    <div class="item-column">
+      <div class="iconwrap" style="left:75%">
+
+
+          <a [routerLink]="['/login']" *ngIf="!isLoggedinData">
+            <button class="user-button"><i class="fa fa-user"></i></button>
+          </a>
+
+
+          <a [routerLink]="['/account']" *ngIf="isLoggedinData">
+            <button class="user-button" style="background: rgb(0, 255, 0)"><i class="fa fa-user"></i></button>
+          </a>
+
+
+
+          <a [routerLink]="['/products']" *ngIf="totalItems == 0">
+            <button class="cart-button"><i class="fa fa-shopping-cart"></i></button>
+          </a>
+
+
+          <a [routerLink]="['/checkout']" *ngIf="totalItems > 0">
+            <button class="cart-button"><i class="fa fa-shopping-cart"></i></button>
+            <div class="cart-count">{{ totalItems }}</div>
+          </a>
+
+
+
+    </div>
+
+
+    </div>
+  </div>
+</div>
+</header>
+<hr>
+<br>
+<br>
+
+
+
+
+
+
+<!--
+
+<div class="icons" style="padding-left:300px;">
+        <div class="icon-item" [routerLinkActive]="['link-active']">
+          <a [routerLink]="['/login']">
+            <button type="submit" class="searchButton">
+              <i class="fa fa-search"></i>
+           </button>
+          </a>
+        </div>
+        </div>
+        <div class="item-column">
+
+        <div class="icon-item" [routerLinkActive]="['link-active']">
+          <button type="submit" class="searchButton" style="top: 4%; left: -5%">
+            <i class="fa fa-search"></i>
+            <span class="icon-button__badge">2</span>
+         </button>
+
+
+        </div>
+      </div>
+
+<header>
+  <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+
+    <div class="container" >
+      <div class="logo-container" style="height: 70px;" [routerLinkActive]="['link-active']">
+        <a [routerLink]="['/home']">
+          <button type="button">
+            <img style="height: 60px;" src="../assets/logo.jpg">
+          </button>
+        </a>
+      </div>
+
+
+
+      <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end">
+
+        <form class="form-inline" style="width: 300px; border: solid; border-radius: 5em 0em 0em 5em; background-color: white; padding-left: 18px">
+          <div class="md-form" style="background-color: white; ">
+            <input class="form-control" style="background-color: white; " type="text" placeholder="Search...">
+          </div>
+
+        </form>
+          <button type="button" class="search-icon-button">
+            <span class="material-icons">search</span>
+          </button>
+
+        <ul class="navbar-nav flex-grow" style="padding-left:300px;">
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a [routerLink]="['/login']">
+              <button type="button" class="icon-button">
+                <span class="material-icons">person</span>
+              </button>
+            </a>
+          </li>
+
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+            <button type="button" class="icon-button">
+              <span class="material-icons">shopping_bag</span>
+              <span class="icon-button__badge">2</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+-->
+

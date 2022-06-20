@@ -1,0 +1,110 @@
+<!--
+<div class="item-column">
+  <div class="wrap" style="left:40%">
+    <div class="search">
+      <input type="text" class="searchTerm" placeholder="What are you looking for?" [(ngModel)]="searchText"  (input)="Search()">
+      <button type="submit" class="searchButton">
+        <i class="fa fa-search"></i>
+      </button>
+    </div>
+  </div>
+</div>
+-->
+<div *ngIf="numbOfProds == 0" align="center">
+  <br>
+  <br>
+  <h1>Sorry, no results for {{search}} could be found! </h1>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+</div>
+
+<div *ngIf="numbOfProds > 0">
+<div class="item-row" >
+
+  <div class="item-column" *ngFor="let p of products; let i = index">
+    <div class="item-container" >
+      <div style="padding-bottom: 10px;"> </div>
+      <img class="item-img" src="{{p.picture}}">
+      <div style="padding-bottom: 10px;"> </div>
+      <div class="item-info">
+        <div class="item-name">
+          {{p.name}}
+        </div>
+        <div class="item-price">
+          Price: ${{p.price}}
+        </div>
+        <div class="item-quant">
+          Available: {{p.quantity}}
+        </div>
+        <div *ngIf="p.quantity > 0">
+          <!--(ngSubmit)="setProdID(p);addProduct();setIndex(i)"-->
+        <form [formGroup]="addForm" class="form" (ngSubmit)="setProdID(p);addOrUpdate();setIndex(i);incValue();updateData()"  >
+          <input id=demoInput type=number min=1 max={{p.quantity}} placeholder="" formControlName="Quantity" style="margin-right: 10px">
+          <button type="submit" class="add-to-cart"align="center" >Add To Cart</button>
+        </form>
+      </div>
+      <div *ngIf="p.quantity <= 0" style="background: red; font-size: 40px">
+        out of stock
+      </div>
+        <div class="item-descript" style="padding-bottom: 10px;">
+          <details>
+            <summary>More Details...</summary>
+            <p>About: {{p.info}}</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+
+<!--
+<ul>
+  <li *ngFor="let product of products">
+    <p> {{ product.name }} </p>
+  </li>
+</ul>
+
+
+<div class="ps-grid">
+  <div class="ps-row" *ngFor="let p of products ; let i = index">
+    <div class="ps-details">
+      <span>{{ p.Name }}</span>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="item-row" *ngFor="let p of products; let index = index">
+  <div class="item-column">
+    <div class="item-container">
+      <img class="item-img" src="../../assets/pants1.jpg">
+        <div class="item-name">
+          {{p.Name}}
+        </div>
+        <div class="item-price">
+          {{p.Price}}
+        </div>
+        <div class="item-quant">
+          {{p.Quantity}}
+        </div>
+        <div class="item-descript">
+          {{p.Info}}
+      </div>
+    </div>
+  </div>
+
+</div>
+
+-->

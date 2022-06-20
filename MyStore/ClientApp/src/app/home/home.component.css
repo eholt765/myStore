@@ -1,0 +1,62 @@
+@keyframes fadeIn {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 0.9;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 600px;
+  background-image: url("../../assets/main_background.jpg");
+  background-size: cover;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: absolute;
+  top: 35%;
+}
+
+.welcome_box {
+  margin-top: 100px;
+  animation: 1.5s ease-out 0s 1 fadeIn;
+  background-color: lightblue;
+  opacity: 0.9;
+  border: solid;
+}
+
+h1 {
+  font-family: 'Libre Bodoni', serif;
+  font-family: 'Radio Canada', sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  margin: 40px;
+  color: dimgray;
+}
+
+.shop-our-selection {
+  font-family: 'Josefin Sans', sans-serif;
+  animation: 1s ease-out 0s 1 fadeIn;
+  animation-delay: 50ms;
+  background-color: dimgrey;
+  color: white;
+}
+
+  .shop-our-selection:hover {
+    background-color: white;
+    color: dimgrey;
+  }

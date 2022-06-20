@@ -1,0 +1,139 @@
+.logo-container {
+  border: solid;
+  background-color: white;
+}
+
+.logo-image{
+    height: 20px;
+}
+
+
+.icon-button__badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 25px;
+  height: 25px;
+  background: red;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+
+
+
+
+.item-row {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+
+  padding: 10px;
+
+}
+
+.item-column {
+  font-size: 15px;
+}
+
+.navigation{
+  background:lightblue;
+  height: 90px;
+
+}
+
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid black;
+  border-right: none;
+  padding: 5px;
+  height: 36px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 2px solid black;
+  background: black;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.searchButton:hover {
+
+  background: grey;
+
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 20%;
+  position: absolute;
+  top: 4%;
+
+}
+
+.user-button{
+  font-size: 30px;
+  background:white;
+  margin-left:60px;
+  margin-top: 10px;
+
+  border-radius: 50%;
+  width:50px;
+}
+.cart-button{
+  font-size: 30px;
+  background:white;
+  margin-left:60px;
+  border-radius: 50%;
+  width:50px;
+}
+
+.cart-button:hover{
+  background:lightgrey;
+}
+
+.user-button:hover{
+  background:lightgrey;
+}
+
+.iconwrap{
+  width: 20%;
+  position: absolute;
+
+
+}
+
+.cart-count{
+  display:inline-block;
+  width:30px;
+  opacity:100;
+  height:30px;
+  background:red;
+  text-align:center;
+  border-radius:50%;
+  border: solid black;
+  font-size: 20px;
+  position: relative;
+  right: 16px;
+  bottom: 22px;
+  color: black;
+}

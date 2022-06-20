@@ -1,0 +1,21 @@
+INSERT INTO Product(Name, Price, Info, Category, Picture, Quantity)
+VALUES 
+	('Black Glasses', 10.99, 'High quality with classic design. Matte balck finish', 'Accesories', '../../assets/glasses1.jpg',1000),
+	('Reflective Glasses', 15.89, 'Very cool shades! Reflective lens finish', 'Accesories', '../../assets/glasses2.jpg',15),
+	('Silver Chain Necklace', 135.69, 'Made from pure silver. Polished finish', 'Accesories', '../../assets/necklace1.jpg',20),
+	('Athletic Pants', 16.99, 'Slim fit breathable pants', 'Pants', '../../assets/pants1.jpg',80),
+	('Black Jeans', 20.54, 'Slim fit black dyed pants. Very goth!', 'Pants', '../../assets/pants2.jpg',5),
+	('Brown Jeans', 23.09, 'Slim fit. Brown dye pants', 'Pants', '../../assets/pants3.jpg',1),
+	('Blue Jeans', 25.29, 'Slim fit. Classic blue jean color', 'Pants', '../../assets/pants4.jpg',0),
+	('Jean Shirt', 13.02, 'Classic blue jean color', 'Shirts', '../../assets/shirt1.jpg',9),
+	('Black Shirt', 9.09, 'A nice black shirt', 'Shirts', '../../assets/shirt2.jpg',8),
+	('Buttonup Shirt', 12.66, 'You will look like a lumber jack!', 'Shirts', '../../assets/shirt3.jpg',0),
+	('Funny Shirt', 8.88, 'This shirt is funny', 'Shirts', '../../assets/shirt4.jpg',16),
+	('America Shirt', 60.09, 'This is a very patriotic shirt', 'Shirts', '../../assets/shirt5.jpg',23),
+	('Music Shirt', 1.03, 'Show your love for music!', 'Shirts', '../../assets/shirt6.jpg',78),
+	('Coke Shirt', 0.97, 'Pepsi is NOT okay my good sir', 'Shirts', '../../assets/shirt7.jpg',2),
+	('White Shoes', 103.56, 'Classic converses shoes in white', 'Shoes', '../../assets/shoes1.jpg',6),
+	('Red Shoes', 123.49, 'Classic converses shoes in red', 'Shoes', '../../assets/shoes2.jpg',8),
+	('Black Shoes', 113.56, 'Classic vans shoes in black', 'Shoes', '../../assets/shoes3.jpg',6),
+	('Three Braclete', 5.76, 'its a braclette', 'Accesories', '../../assets/wrist1.jpg',9),
+	('Bead Braclete', 3.43, 'its also a braclette', 'Accesories', '../../assets/wrist2.jpg',1);

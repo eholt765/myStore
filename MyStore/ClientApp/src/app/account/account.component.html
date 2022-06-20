@@ -1,0 +1,60 @@
+
+
+
+<h3 align="center">Hello {{customer.firstName}} {{customer.lastName}} welcome to your profile</h3>
+<br>
+
+<div class="buttons">
+
+  <div class="action_btn" style="margin-left: 34%;">
+
+  <button class="action_btn submit" style="margin-right: 20px;" (click)="logout()">Logout</button>
+  <button class="action_btn submit" (click)="viewOrders()">View Orders</button>
+
+  </div>
+
+</div>
+
+<br>
+<br>
+
+
+
+
+<body>
+  <div class="main">
+    <p class="sign" align="center">Update Your Account?</p>
+    <form [formGroup]="updateForm" class="form1" (ngSubmit)="update()">
+      <input class="un " type="text" align="center" placeholder="Firstname" formControlName="FirstName">
+      <input class="un " type="text" align="center" placeholder="Lastname" formControlName="LastName">
+      <input class="un " type="text" align="center" placeholder="Username" formControlName="UserName">
+      <input class="un " type="text" align="center" placeholder="Email" formControlName="Email">
+      <input class="pass" type="password" align="center" placeholder="Password" formControlName="Password">
+      <button type="submit" class="submit" align="center">Update</button>
+    </form>
+  </div>
+</body>
+
+<br>
+<br>
+
+
+
+
+
+
+  <div *ngIf="hasItems">
+    <h3 align="center">Please remove the items in your cart to delete your account!</h3>
+    <br>
+    <button align="center" class="submit" style="margin-left: 44%;" (click)="goToCart()">Go To Cart</button>
+  </div>
+  <div *ngIf="!hasItems">
+    <button align="center" class="submit" style="margin-left: 44%;" (click)="deleteCustomer()">Delete Account</button>
+  </div>
+
+
+
+<br>
+
+
+

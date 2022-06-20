@@ -1,0 +1,47 @@
+
+<div *ngIf="len == 0" align="center">
+  <br>
+  <br>
+  <h1>Our records indicate that you have not placed any orders yet! </h1>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+
+
+<div class="col" *ngIf="len > 0">
+  <div *ngFor="let o of orders; let i = index">
+  <div class="container" >
+    <h4>Order# {{o.orderId}}
+      <span class="price" style="color:black">
+        <i class="fa fa-shopping-cart"></i>
+        <b>{{o.itemCount}}</b>
+      </span>
+    </h4>
+
+    <div *ngFor="let p of products; let i = index">
+      <div *ngIf="p.orderProduct.orderId == o.orderId">
+        <img class="item-img" src="{{p.product.picture}}" style="float: left; margin-right: 15px;">
+
+
+        <span>
+          <div>{{p.product.name}}</div>
+          <div>${{p.product.price}} x {{p.orderProduct.quantity}} = ${{p.subTotal}}</div>
+          <br>
+          <br>
+        </span>
+      </div>
+    </div>
+    <hr>
+    <p>Total <span class="price" style="color:black"><b>${{o.cost}}</b></span></p>
+    <p>Charged to card ending in: {{o.fourCard}}</p>
+
+  </div>
+  <br>
+  </div>
+</div>
+
+
