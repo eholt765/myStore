@@ -14,9 +14,10 @@
   - Shop for products
   - Checkout
   - view orders under account page
-  - update or delete profile on account page
+  - update profile on account page
   
 # Known Bugs
   - Add to cart sometimes fails. reload and log in. results should now be correctly displayed
   - Total sometimes extends past two digits ie 53.14 might be 53.14000005 (Can't place orders when this happens)
   - Search fails if no results found and then a valid search is done. Must clear input, hit enter, then search a valid input
+  - delete account no longer works if user has orders and order products due to database set up.
